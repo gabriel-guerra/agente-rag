@@ -22,7 +22,7 @@ result = client.models.embed_content(
 
 # Structure in a pandas dataframe
 data = pd.DataFrame({
-    "embedding": result.embeddings[0].values,
+    "embedding": [result.embeddings[0].values],
     "text": content
 })
 
