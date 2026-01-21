@@ -19,7 +19,7 @@ class GeminiService:
             model="gemini-embedding-001",
             contents=prompt
         )
-        return result.embeddings[0].values
+        return [result.embeddings[0].values]
 
     def save_embedding(self, prompt):
         data = pd.DataFrame({
@@ -53,7 +53,7 @@ class GeminiService:
         
         response = self.client.models.generate_content(
             model="gemini-3-flash-preview",
-            contents=prompt
+            contents=content
         )
 
         self.save_embedding(response.text)

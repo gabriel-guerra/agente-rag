@@ -26,7 +26,7 @@ fields = [
     FieldSchema(
         name='text',
         dtype=DataType.VARCHAR,
-        max_length=512
+        max_length=10_000
     )
 ]
 
