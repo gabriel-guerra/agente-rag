@@ -13,4 +13,4 @@ class RequestPromptModel(BaseModel):
 @router.post("/")
 def find_context(req: RequestPromptModel):
     gemini = GeminiService()
-    gemini.generate(req.prompt)
+    return gemini.generate(req.prompt)
